@@ -1,0 +1,31 @@
+{
+  "name": "erc20-migration",
+  "version": "1.0.0",
+  "description": "Exercise on migrating ERC20 token contract between distinct EVM-based chains",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/vidalpaul/erc20-migration"
+  },
+  "keywords": [
+    "ethereum",
+    "evm",
+    "erc20",
+    "token",
+    "blockchain",
+    "polygon",
+    "erc-20"
+  ],
+  "author": "vidalpaul",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1"
+  }
+}
