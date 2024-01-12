@@ -20,7 +20,7 @@
     "erc-20"
   ],
   "author": "vidalpaul",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
     "hardhat": "^2.19.4"
