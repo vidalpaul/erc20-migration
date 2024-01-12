@@ -13,5 +13,6 @@ contract Token is ERC20Pausable, Ownable {
         string memory symbol
     ) ERC20("MyToken", "MTKN") {
         _mint(msg.sender, INITIAL_SUPPLY);
+        _pause();
 s    }
 }
