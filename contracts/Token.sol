@@ -10,9 +10,25 @@ contract Token is ERC20Pausable, Ownable {
 
     constructor(
         string memory name,
-        string memory symbol
-    ) ERC20("MyToken", "MTKN") {
+        string memory symbol,
+        address[] memory tokenHolders,
+        uint256[] memory amounts
+    ) ERC20(name, symbol) {
         _mint(msg.sender, INITIAL_SUPPLY);
         _pause();
-s    }
+        batchMint(tokenHolders, amounts);
+    }
+
+    function batchMint(
+        address[] memory tokenHolders,
+        uint256[] memory amounts
+    ) internal {
+        require(
+            tokenHolders.length == amounts.length,
+            "Token: tokenHolders and amounts length mismatch"
+        );
+        for (uint256 i = 0; i < tokenHolders.length; i++) {
+            _mint(tokenHolders[i], amounts[i]);
+        }
+    }
 }
