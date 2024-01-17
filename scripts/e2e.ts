@@ -1,6 +1,10 @@
 import { ethers } from "hardhat";
 
-async function deploy() {
+async function deploy(network: "sepolia" | "mumbai") {
+  const [deployer] = await ethers.getSigners();
+
+  console.log("Deploying contracts with the account:", deployer.address);
+
   const token = await ethers.deployContract("Token");
 
   await token.waitForDeployment();
